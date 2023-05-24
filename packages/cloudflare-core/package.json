@@ -11,7 +11,6 @@
   ],
   "scripts": {},
   "dependencies": {
-    "@cloudflare/workers-types": "^4.20230518.0",
     "hono": "^3.2.2"
   }
 }

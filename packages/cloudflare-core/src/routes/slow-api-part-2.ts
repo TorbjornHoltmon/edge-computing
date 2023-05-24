@@ -1,6 +1,15 @@
 import { theSlowApi } from "./slow-api";
 
-export async function slowPOSTApi(kv: KVNamespace): Promise<Response> {
+export function slowPOSTApi(): Promise<Response> {
+  const url = new URL(theSlowApi);
+
+  url.searchParams.set("wait", "2000");
+  return fetch(url.toString(), {
+    method: "POST",
+  });
+}
+
+export async function slowButFastPOSTApi(kv: KVNamespace): Promise<Response> {
   const cachedResult = await kv.get("slowPOSTApi", "stream");
 
   if (cachedResult) {
