@@ -1,4 +1,4 @@
-const theSlowApi = "https://the-slow-api.vercel.app/api/slow";
+export const theSlowApi = "https://the-slow-api.vercel.app/api/slow";
 
 export function slowApi(): Response | Promise<Response> {
   const url = new URL(theSlowApi);

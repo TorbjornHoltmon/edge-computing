@@ -38,6 +38,9 @@ importers:
 
   apps/next:
     dependencies:
+      '@edge-computing/cloudflare-core':
+        specifier: workspace:*
+        version: link:../../packages/cloudflare-core
       '@types/node':
         specifier: ^20.2.3
         version: 20.2.3

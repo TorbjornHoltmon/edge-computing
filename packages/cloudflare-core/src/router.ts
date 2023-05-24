@@ -9,8 +9,8 @@ type HonoBindings = {
 export function getRouter() {
   const router = new Hono<HonoBindings>();
 
-  router.get("/slow", () => slowApi());
-  router.get("/slow-but-fast", () => slowApiButFast());
+  router.get("/api/slow", () => slowApi());
+  router.get("/api/slow-but-fast", () => slowApiButFast());
 
   return router;
 }

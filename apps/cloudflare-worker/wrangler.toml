@@ -9,6 +9,10 @@ main = "./dist/worker.js"
 routes = [
 	{ pattern = "edge.project-ignition.com", custom_domain = true },
 ]
+kv_namespaces = [
+  { binding = "KV", id = "fa2b150f47464113b22de76d93012dc5" }
+]
+
 
 [build]
 command = ""
