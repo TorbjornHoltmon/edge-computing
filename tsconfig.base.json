@@ -6,11 +6,10 @@
     "strict": true,
     "strictNullChecks": true,
     "skipLibCheck": true,
+    "moduleResolution": "node",
     "esModuleInterop": true,
-    "types": ["web"],
+    "types": ["@cloudflare/workers-types"],
     "declarationMap": true,
-    "declaration": true,
-    "sourceMap": true,
-    "moduleResolution": "node"
+    "resolveJsonModule": true
   }
 }

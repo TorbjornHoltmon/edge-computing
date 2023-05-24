@@ -4,6 +4,9 @@ importers:
 
   .:
     devDependencies:
+      '@cloudflare/workers-types':
+        specifier: ^4.20230518.0
+        version: 4.20230518.0
       '@types/node':
         specifier: ^20.2.3
         version: 20.2.3
@@ -16,6 +19,22 @@ importers:
       typescript:
         specifier: 5.0.4
         version: 5.0.4
+
+  apps/cloudflare-worker:
+    dependencies:
+      '@edge-computing/cloudflare-core':
+        specifier: workspace:*
+        version: link:../../packages/cloudflare-core
+    devDependencies:
+      '@cloudflare/workers-types':
+        specifier: ^4.20230518.0
+        version: 4.20230518.0
+      '@types/node':
+        specifier: ^20.2.3
+        version: 20.2.3
+      vite:
+        specifier: ^4.3.8
+        version: 4.3.8(@types/node@20.2.3)
 
   apps/next:
     dependencies:
@@ -115,8 +134,8 @@ importers:
         specifier: ^4.20230518.0
         version: 4.20230518.0
       hono:
-        specifier: ^3.2.1
-        version: 3.2.1
+        specifier: ^3.2.2
+        version: 3.2.2
 
   slides:
     dependencies:
@@ -1384,7 +1403,6 @@ packages:
 
   /@cloudflare/workers-types@4.20230518.0:
     resolution: {integrity: sha512-A0w1V+5SUawGaaPRlhFhSC/SCDT9oQG8TMoWOKFLA4qbqagELqEAFD4KySBIkeVOvCBLT1DZSYBMCxbXddl0kw==}
-    dev: false
 
   /@cspotcode/source-map-support@0.8.1:
     resolution: {integrity: sha512-IchNf6dN4tHoMFIn/7OE8LWZ19Y6q/67Bmf6vnGREv8RSbBVb9LPJxEcnwrcwX6ixSvaiGoomAUvu4YSxXrVgw==}
@@ -7162,8 +7180,8 @@ packages:
     resolution: {integrity: sha512-COpmrF2NOg4TBWUJ5UVyaCU2A88wEMkUPK4hNqyCkqHbxT92BbvfjoSozkAIIm6XhicGlJHhFdullInrdhwU8Q==}
     dev: false
 
-  /hono@3.2.1:
-    resolution: {integrity: sha512-yWpBvr5E5u2JPsVfgBOBlfqbpTCkTE5nZWB0WrA5QJYTQCf39WjhkZ4iFLP/tv4hgWBtXC+aWGyCHt11H10ghg==}
+  /hono@3.2.2:
+    resolution: {integrity: sha512-yVkYyefATYGz6j7iDcugtEvg4AgpccE1tDYnmvTmXDR4NQrUJ3/SdHU9V7UuWQjGtfrBujeBUAq70oc82ADsvA==}
     engines: {node: '>=16.0.0'}
     dev: false
 

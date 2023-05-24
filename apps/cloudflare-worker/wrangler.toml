@@ -1,0 +1,17 @@
+name = "edge-worker-presentation"
+type = "javascript"
+account_id = "3e4f1532cfa5bc12d195b9683a04a823"
+zone_id = "2619934e5d8d785e3a9b1fb79a4b7d5d"
+
+usage_model = "bundled"
+compatibility_date = "2023-05-24"
+
+[env.staging]
+workers_dev = false
+main = "./dist/worker.js"
+routes = [
+	{ pattern = "edge.project-ignition.com", custom_domain = true },
+]
+
+[build]
+command = ""

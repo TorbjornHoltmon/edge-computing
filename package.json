@@ -6,7 +6,8 @@
     "@types/node": "^20.2.3",
     "prettier": "^2.8.8",
     "turbo": "latest",
-    "typescript": "5.0.4"
+    "typescript": "5.0.4",
+    "@cloudflare/workers-types": "^4.20230518.0"
   },
   "engines": {
     "node": "^19.0.0",
