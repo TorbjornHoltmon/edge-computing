@@ -55,4 +55,4 @@ jobs:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_DEPLOY_TOKEN }}
         working-directory: "apps/cloudflare-worker"
         run: |
-          pnpm dlx wrangler publish --no-bundle
+          pnpm dlx wrangler deploy --no-bundle
