@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "lib": ["ESNext", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "strict": true,
+    "strictNullChecks": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "types": ["web"],
+    "declarationMap": true,
+    "declaration": true,
+    "sourceMap": true,
+    "moduleResolution": "node"
+  }
+}

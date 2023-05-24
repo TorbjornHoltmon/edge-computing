@@ -1,0 +1,17 @@
+{
+  "name": "slides",
+  "private": true,
+  "scripts": {
+    "build": "slidev build",
+    "dev": "slidev --open",
+    "export": "slidev export"
+  },
+  "dependencies": {
+    "@unocss/reset": "0.52.3",
+    "vue": "^3.3.4",
+    "vite-plugin-vue-server-ref": "^0.3.3",
+    "@slidev/cli": "^0.41.1",
+    "@slidev/theme-default": "latest",
+    "@slidev/theme-seriph": "latest"
+  }
+}

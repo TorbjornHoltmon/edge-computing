@@ -1,0 +1,15 @@
+{
+  "name": "edge-computing",
+  "private": true,
+  "scripts": {},
+  "devDependencies": {
+    "@types/node": "^20.2.3",
+    "prettier": "^2.8.8",
+    "turbo": "latest",
+    "typescript": "5.0.4"
+  },
+  "engines": {
+    "node": "^19.0.0",
+    "pnpm": ">=8.2.0"
+  }
+}
