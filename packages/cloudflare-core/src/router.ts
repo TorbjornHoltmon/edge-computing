@@ -27,8 +27,7 @@ export function getRouter() {
   router.get("/api/guestbook", (c) => getGuestBookEntries(c.env.KV));
 
   router.post("/api/guestbook", async (c) => {
-    const formData = await c.req.formData();
-    let guestBookEntry: any = Object.fromEntries(formData);
+    const guestBookEntry = await c.req.json<GuestBookEntry>();
     return addEntryToGuestBook(c.env.KV, guestBookEntry);
   });
 
