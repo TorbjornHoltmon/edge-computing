@@ -3,6 +3,7 @@ import { Environment } from "./environment";
 import { slowApi, slowApiButFast } from "./responses/slow-api";
 import { slowButFastPOSTApi, slowPOSTApi } from "./responses/slow-api-part-2";
 import { fastBackgroundWorkApi, slowBackgroundWorkAPI } from "./responses/background-work";
+import { GuestBookEntry, addEntryToGuestBook, getGuestBookEntries } from "./responses/guest-book";
 
 type HonoBindings = {
   Bindings: Environment;
@@ -22,6 +23,14 @@ export function getRouter() {
   router.get("/api/background", () => slowBackgroundWorkAPI());
 
   router.get("/api/fast-background", (c) => fastBackgroundWorkApi(c.executionCtx));
+
+  router.get("/api/guestbook", (c) => getGuestBookEntries(c.env.KV));
+
+  router.post("/api/guestbook", async (c) => {
+    const formData = await c.req.formData();
+    let guestBookEntry: any = Object.fromEntries(formData);
+    return addEntryToGuestBook(c.env.KV, guestBookEntry);
+  });
 
   return router;
 }

@@ -1,5 +1,7 @@
 export const theSlowApi = "https://the-slow-api.vercel.app/api/slow";
 
+const slow = "https://edge.project-ignition.com/api/slow";
+
 export function slowApi(): Response | Promise<Response> {
   const url = new URL(theSlowApi);
 
@@ -11,6 +13,8 @@ export function slowApi(): Response | Promise<Response> {
 
   return result;
 }
+
+const slowButFast = "https://edge.project-ignition.com/api/slow-but-fast";
 
 export function slowApiButFast(): Response | Promise<Response> {
   const url = new URL(theSlowApi);

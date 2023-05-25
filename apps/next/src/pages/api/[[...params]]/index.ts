@@ -14,7 +14,7 @@ type Data = {
 export default function handler(req: NextApiRequest, res: NextApiResponse<Data>) {
   if (req.url) {
     const headers = new Headers();
-
+    console.log("Here it is");
     for (const [key, value] of Object.entries(req.headers)) {
       headers.set(key, value as string);
     }
