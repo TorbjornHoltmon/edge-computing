@@ -24,7 +24,7 @@ export default function Home() {
       body: JSON.stringify({ name, message }),
     });
     const data = await response.json();
-    setMessages([...messages, data]);
+    setMessages([...data]);
     setMessage("");
     setName("Anonymous");
   };
