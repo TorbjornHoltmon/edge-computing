@@ -78,7 +78,7 @@ export default function Home() {
                 </button>
               </form>
             </div>
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-4 pt-6">
               {messages?.map((msg, index) => {
                 return (
                   <div key={`${index}messages`}>
