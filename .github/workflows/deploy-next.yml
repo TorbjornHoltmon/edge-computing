@@ -52,7 +52,7 @@ jobs:
 
       - name: Build next
         run: pnpm dlx @cloudflare/next-on-pages
-        working-directory: apps/next
+        working-directory: apps/next-app-router
 
       - name: Publish to Cloudflare Pages
         uses: cloudflare/pages-action@v1
@@ -60,6 +60,6 @@ jobs:
           apiToken: ${{ secrets.CLOUDFLARE_DEPLOY_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           projectName: next-edge-compute
-          workingDirectory: apps/next
+          workingDirectory: apps/next-app-router
           branch: ${{ steps.branch-name.outputs.current_branch }}
           directory: .vercel/output/static
